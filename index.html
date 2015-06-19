@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Briefcases & Bureaucrats</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/normalize.css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="pageWrapper">
+    <div id="characterCreationPage" class="activePage">
+      <div id="characterCreationBlock">
+        <div id="creationTitleBlock">
+          <h1>Briefcases & Bureaucrats</h1>
+        </div>
+        <div id="creationInfoBlock">
+          <div id="creationNameBlock">
+            <div id="creationNameTitle">Name</div>
+            <input type="text" id="characterNameInput" name="characterNameInput" autofocus>
+          </div>
+          <div id="creationDepartmentBlock">
+            <div id="creationDepartmentTitle">Department</div>
+            <div id="creationDepartmentsBlock">
+              <div class="creationDepartmentBlock">
+                <div class="creationDepartmentImage">
+                  <i class="fa fa-pencil"></i>
+                </div>
+                <div class="creationDepartmentName">
+                  Accounting
+                </div>
+              </div>
+              <div class="creationDepartmentBlock">
+                <div class="creationDepartmentImage">
+                  <i class="fa fa-briefcase"></i>
+                </div>
+                <div class="creationDepartmentName">
+                  Management
+                </div>
+              </div>
+              <div class="creationDepartmentBlock">
+                <div class="creationDepartmentImage">
+                  <i class="fa fa-bar-chart"></i>
+                </div>
+                <div class="creationDepartmentName">
+                  Marketing
+                </div>
+              </div>
+              <div class="creationDepartmentBlock">
+                <div class="creationDepartmentImage">
+                  <i class="fa fa-usd"></i>
+                </div>
+                <div class="creationDepartmentName">
+                  Sales
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="creationSubmitBlock">
+            <button id="creationSubmitButton">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="gamePage">
+      <div id="gamePageBlock">
+        <div id="gameScreen">
+          <div id="gameScreenLeft">
+            <div id="playerIcon">
+
+            </div>
+          </div>
+          <div id="gameScreenMiddle">
+            <div id="combatLog">
+              <div id="combatLogText">
+                Player1 hit Player2 for 10 damage!
+              </div>
+            </div>
+            <div id="infoBox">
+              <div id="infoBoxText">
+
+              </div>
+            </div>
+          </div>
+          <div id="gameScreenRight">
+            <div id="enemyIcon">
+
+            </div>
+          </div>
+        </div>
+        <div id="gameInfo">
+          <div id="playerInfoBlock">
+            <div id="playerInfoTitle">
+              <h3></h3>
+            </div>
+            <div id="playerInfoStatNames">
+              <div>
+                Health:
+              </div>
+              <div>
+                Energy:
+              </div>
+              <div>
+                Attack:
+              </div>
+              <div>
+                Defense:
+              </div>
+            </div>
+            <div id="playerInfoStatValues">
+              <div id="playerHealth">
+                -
+              </div>
+              <div id="playerEnergy">
+                -
+              </div>
+              <div id="playerAttack">
+                -
+              </div>
+              <div id="playerDefense">
+                -
+              </div>
+            </div>
+          </div>
+          <div id="actionBlock">
+            <div id="actionBlockInner">
+              <div id="actionAttackBlock">
+                Attack
+              </div>
+              <div id="actionAbility1Block">
+                Ability 1
+              </div>
+              <div id="actionAbility2Block">
+                Ability 2
+              </div>
+            </div>
+          </div>
+          <div id="enemyInfoBlock">
+            <div id="enemyInfoTitle">
+              <h3>Enemy</h3>
+            </div>
+            <div id="enemyInfoStatNames">
+              <div>
+                Health:
+              </div>
+              <div>
+                Energy:
+              </div>
+              <div>
+                Attack:
+              </div>
+              <div>
+                Defense:
+              </div>
+            </div>
+            <div id="enemyInfoStatValues">
+              <div id="enemyHealth">
+                -
+              </div>
+              <div id="enemyEnergy">
+                -
+              </div>
+              <div id="enemyAttack">
+                -
+              </div>
+              <div id="enemyDefense">
+                -
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<audio src="media/Nutko_Croq.mp3" loop>
+
+</audio>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery-color/jquery.color.js"></script>
+<script src="bower_components/underscore/underscore-min.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+/*********************
+VARIABLES
+*********************/
+
+$terminalGreen: #1FE41A;
+
+/*********************
+SETUP
+*********************/
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: 24px;
+}
+
+body {
+  font-family: 'Roboto', sans;
+  background-color: black;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,ul,li,p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: underline;
+}
+
+#pageWrapper {
+  height: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* .activePage {
+  display: flex !important;
+} */
+
+/*********************
+CREATION PAGE
+*********************/
+
+#characterCreationPage {
+  height: 100%;
+  width: 100%;
+  color: $terminalGreen;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #characterCreationBlock {
+    height: 750px;
+    width: 100%;
+    border: 1px solid $terminalGreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    #creationTitleBlock {
+      width: 100%;
+      height: 100px;
+      background: $terminalGreen;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-weight: lighter;
+        font-size: 4rem;
+      }
+    }
+
+    #creationInfoBlock {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      #creationNameBlock {
+        margin-top: 25px;
+        height: 150px;
+        width: 90%;
+        position: relative;
+        border: 1px solid $terminalGreen;
+        background-color: black;
+        display: flex;
+        align-items: center;
+
+        #creationNameTitle {
+          position: absolute;
+          background-color: black;
+          font-size: 1.5rem;
+          top: -25px;
+          left: 35px;
+          width: 100px;
+        }
+
+        #characterNameInput {
+          height: 100%;
+          width: 100%;
+          font-size: 3.5rem;
+          background-color: black;
+          border: 0;
+          text-align: center;
+
+          &:focus {
+            outline: 0;
+          }
+        }
+      }
+
+      #creationDepartmentBlock {
+        height: 275px;
+        border: 1px solid $terminalGreen;
+        position: relative;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #creationDepartmentTitle {
+          position: absolute;
+          background-color: black;
+          font-size: 1.5rem;
+          top: -25px;
+          left: 35px;
+          width: 187.5px;
+        }
+
+        #creationDepartmentsBlock {
+          width: 80%;
+          border: 1px solid $terminalGreen;
+          height: 200px;
+          display: flex;
+
+          .activeDepartment {
+            background-color: $terminalGreen;
+            color: black;
+            border-color: black;
+          }
+
+          .creationDepartmentBlock {
+            width: 25%;
+            height: 100%;
+            cursor: pointer;
+            border-right: 1px solid $terminalGreen;
+            transition: all .25s ease;
+            -webkit-transition: all .25s ease;
+
+            &:last-child {
+              border-right: none;
+            }
+
+            .creationDepartmentImage {
+              height: 150px;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              i {
+                font-size: 4rem;
+              }
+            }
+
+            .creationDepartmentName {
+              height: 50px;
+              border-top: 1px solid $terminalGreen;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            &:hover {
+              background-color: $terminalGreen;
+              color: black;
+            }
+          }
+        }
+      }
+
+      #creationSubmitBlock {
+        width: 90%;
+
+        button {
+          width: 100%;
+          font-size: 3rem;
+          background-color: black;
+          border: 1px solid $terminalGreen;
+          transition: all .25s ease;
+          -webkit-transition: all .25s ease;
+
+          &:focus {
+            outline: 0;
+          }
+
+          &:hover {
+            background-color: $terminalGreen;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*********************
+GAME PAGE
+*********************/
+
+#gamePage {
+  height: 100%;
+  width: 100%;
+  color: $terminalGreen;
+  font-weight: lighter;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #gamePageBlock {
+    height: 700px;
+    width: 100%;
+    border: 1px solid $terminalGreen;
+
+    #gameScreen {
+      height: 500px;
+      display: flex;
+      justify-content: space-around;
+
+      > div {
+        width: 33.33%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > div {
+          height: 75%;
+          width: 75%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          i {
+            font-size: 10rem;
+          }
+        }
+      }
+
+      #gameScreenMiddle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        > div {
+          width: 100%;
+        }
+
+        #infoBox {
+          background-color: blue;
+        }
+      }
+    }
+
+    #gameInfo {
+      height: 200px;
+      background-color: $terminalGreen;
+      color: black;
+      border-top: 3px solid $terminalGreen;
+      border-bottom: 3px solid $terminalGreen;
+      display: flex;
+
+      > div {
+        width: 33.33%;
+      }
+
+      #playerInfoBlock,
+      #enemyInfoBlock {
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        #playerInfoTitle,
+        #enemyInfoTitle {
+          width: 100%;
+          height: 20%;
+          border-bottom: 1px solid black;
+          text-align: center;
+
+          h3 {
+            font-weight: lighter;
+          }
+        }
+
+        #playerInfoStatNames,
+        #enemyInfoStatNames {
+          text-align: center;
+          width: 50%;
+          height: 80%;
+
+          > div {
+            height: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        #playerInfoStatValues,
+        #enemyInfoStatValues {
+          width: 50%;
+          height: 80%;
+
+          > div {
+            height: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bolder;
+          }
+        }
+      }
+
+      #actionBlock {
+        height: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #actionBlockInner {
+          height: 80%;
+          width: 95%;
+          color: $terminalGreen;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+
+          #actionAttackBlock {
+            width: 100%;
+            height: 40%;
+            border: 1px solid $terminalGreen;
+            margin-bottom: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          #actionAbility1Block,
+          #actionAbility2Block {
+            width: 45%;
+            height: 40%;
+            border: 1px solid $terminalGreen;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          #actionAttackBlock,
+          #actionAbility1Block,
+          #actionAbility2Block {
+            cursor: pointer;
+            transition: all .25s ease;
+            -webkit-transition: all .25s ease;
+            &:hover {
+              background-color: $terminalGreen;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
