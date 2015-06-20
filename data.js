@@ -13,7 +13,7 @@ var departments = [
     abilities: [
       {
         title: "Number Crunch",
-        cost: 40,
+        cost: 50,
         description: "Deals 25 damage to your enemy, and reduces their attack by 10%.",
         player1Action: function() {
           $('#combatLogText').text(player1.name + " used " + player1.ability1.title + " and dealt 25 damage to " + player2.name + ", reducing their attack by 10%.");
@@ -185,7 +185,7 @@ var departments = [
       {
         title: "Close Sale",
         cost: 60,
-        description: "Instantly kills an enemy 25% health or less, otherwise deals 30 damage.",
+        description: "Instantly kills an enemy with 25% health or less, otherwise deals 30 damage.",
         player1Action: function() {
           if (player2.health <= (0.25 * player2.maxHealth)) {
             $('#combatLogText').text(player1.name + " used " + player1.ability2.title + " instantly killing " + player2.name);

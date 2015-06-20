@@ -203,7 +203,7 @@ function ability2Action() {
 
 function player1DeathCheck() {
   if (player1.health <= 0) {
-    $('#winLoseText').text("Your loser!");
+    $('#winLoseText').text("Your losar!");
     $('#winLoseBlock').fadeIn();
     resetGame();
     return true;
