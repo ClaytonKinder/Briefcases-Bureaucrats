@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="media/favicon.ico">
   <title>Briefcases & Bureaucrats</title>
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css">
@@ -66,6 +67,14 @@
     </div>
     <div id="gamePage">
       <div id="gamePageBlock">
+        <div id="winLoseBlock">
+          <div id="winLoseText">
+            Your winnar!
+          </div>
+          <div id="winLosePlayAgain">
+            <span>Play again?</span>
+          </div>
+        </div>
         <div id="gameScreen">
           <div id="gameScreenLeft">
             <div id="playerIcon">
@@ -73,14 +82,27 @@
             </div>
           </div>
           <div id="gameScreenMiddle">
+            <div id="turnBlock">
+
+            </div>
             <div id="combatLog">
               <div id="combatLogText">
-                Player1 hit Player2 for 10 damage!
+
               </div>
             </div>
             <div id="infoBox">
-              <div id="infoBoxText">
+              <div id="infoBoxBlock">
+                <div id="infoBoxBlockTop">
+                  <div id="infoBoxBlockTitle">
 
+                  </div>
+                  <div id="infoBoxBlockCost">
+                    Cost: <span></span>
+                  </div>
+                </div>
+                <div id="infoBoxBlockDescription">
+
+                </div>
               </div>
             </div>
           </div>
@@ -174,7 +196,7 @@
       </div>
     </div>
   </div>
-<audio src="media/Nutko_Croq.mp3" loop>
+<audio src="media/Nutko_Croq.mp3" autoplay loop>
 
 </audio>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>

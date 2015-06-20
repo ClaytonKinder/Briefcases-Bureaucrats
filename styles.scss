@@ -4,6 +4,11 @@ VARIABLES
 
 $terminalGreen: #1FE41A;
 
+@font-face {
+  font-family: "PressStart2P";
+  src: url('PressStart2P.ttf');
+}
+
 /*********************
 SETUP
 *********************/
@@ -46,10 +51,6 @@ a {
   margin: 0 auto;
 }
 
-/* .activePage {
-  display: flex !important;
-} */
-
 /*********************
 CREATION PAGE
 *********************/
@@ -59,41 +60,85 @@ CREATION PAGE
   width: 100%;
   color: $terminalGreen;
   font-weight: lighter;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
 
   #characterCreationBlock {
     height: 750px;
     width: 100%;
     border: 1px solid $terminalGreen;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
 
     #creationTitleBlock {
       width: 100%;
       height: 100px;
       background: $terminalGreen;
       color: black;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+              justify-content: center;
 
       h1 {
         font-weight: lighter;
-        font-size: 4rem;
+        font-size: 1.8rem;
+        font-family: "PressStart2P";
       }
     }
 
     #creationInfoBlock {
       height: 100%;
       width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+              align-items: center;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+              justify-content: space-around;
 
       #creationNameBlock {
         margin-top: 25px;
@@ -102,8 +147,14 @@ CREATION PAGE
         position: relative;
         border: 1px solid $terminalGreen;
         background-color: black;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+                align-items: center;
 
         #creationNameTitle {
           position: absolute;
@@ -117,6 +168,7 @@ CREATION PAGE
         #characterNameInput {
           height: 100%;
           width: 100%;
+          font-family: "PressStart2P";
           font-size: 3.5rem;
           background-color: black;
           border: 0;
@@ -133,9 +185,18 @@ CREATION PAGE
         border: 1px solid $terminalGreen;
         position: relative;
         width: 90%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+                align-items: center;
 
         #creationDepartmentTitle {
           position: absolute;
@@ -150,6 +211,9 @@ CREATION PAGE
           width: 80%;
           border: 1px solid $terminalGreen;
           height: 200px;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
           display: flex;
 
           .activeDepartment {
@@ -173,9 +237,18 @@ CREATION PAGE
             .creationDepartmentImage {
               height: 150px;
               width: 100%;
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
               display: flex;
-              justify-content: center;
-              align-items: center;
+              -webkit-box-pack: center;
+              -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                      justify-content: center;
+              -webkit-box-align: center;
+              -webkit-align-items: center;
+              -ms-flex-align: center;
+                      align-items: center;
 
               i {
                 font-size: 4rem;
@@ -185,9 +258,18 @@ CREATION PAGE
             .creationDepartmentName {
               height: 50px;
               border-top: 1px solid $terminalGreen;
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
               display: flex;
-              justify-content: center;
-              align-items: center;
+              -webkit-box-pack: center;
+              -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                      justify-content: center;
+              -webkit-box-align: center;
+              -webkit-align-items: center;
+              -ms-flex-align: center;
+                      align-items: center;
             }
 
             &:hover {
@@ -233,33 +315,118 @@ GAME PAGE
   color: $terminalGreen;
   font-weight: lighter;
   z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
 
   #gamePageBlock {
+    position: relative;
     height: 700px;
     width: 100%;
     border: 1px solid $terminalGreen;
 
+    #winLoseBlock {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $terminalGreen;
+      color: black;
+      font-family: "PressStart2P";
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+              justify-content: space-around;
+
+      #winLoseText {
+        text-align: center;
+        font-size: 5rem;
+      }
+
+      #winLosePlayAgain {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+                align-items: center;
+
+        span {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+
     #gameScreen {
       height: 500px;
+      position: relative;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: space-around;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+              justify-content: space-around;
 
       > div {
         width: 33.33%;
         height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+                align-items: center;
 
         > div {
           height: 75%;
           width: 75%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
           display: flex;
-          justify-content: center;
-          align-items: center;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+                  align-items: center;
 
           i {
             font-size: 10rem;
@@ -268,17 +435,102 @@ GAME PAGE
       }
 
       #gameScreenMiddle {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+                align-items: center;
 
         > div {
           width: 100%;
         }
 
+        #turnBlock {
+          background-color: black;
+          color: $terminalGreen;
+          height: 100px;
+        }
+
+        #combatLog {
+          text-align: center;
+
+          #combatLogText {
+            display: none;
+          }
+        }
+
         #infoBox {
-          background-color: blue;
+          height: 50%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: end;
+          -webkit-align-items: flex-end;
+          -ms-flex-align: end;
+                  align-items: flex-end;
+
+          #infoBoxBlock {
+            color: black;
+            height: 50%;
+            width: 100%;
+            display: none;
+            background-color: $terminalGreen;
+
+            #infoBoxBlockTop {
+              height: 25%;
+              border-bottom: 1px solid black;
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-align: center;
+              -webkit-align-items: center;
+              -ms-flex-align: center;
+                      align-items: center;
+
+              #infoBoxBlockTitle {
+                width: 60%;
+                border-right: 1px solid black;
+                text-align: center;
+                font-weight: bolder;
+              }
+
+              #infoBoxBlockCost {
+                width: 40%;
+                text-align: center;
+              }
+            }
+
+            #infoBoxBlockDescription {
+              height: 75%;
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              text-align: center;
+              -webkit-box-pack: center;
+              -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                      justify-content: center;
+              -webkit-box-align: center;
+              -webkit-align-items: center;
+              -ms-flex-align: center;
+                      align-items: center;
+            }
+          }
         }
       }
     }
@@ -289,6 +541,9 @@ GAME PAGE
       color: black;
       border-top: 3px solid $terminalGreen;
       border-bottom: 3px solid $terminalGreen;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
 
       > div {
@@ -298,8 +553,13 @@ GAME PAGE
       #playerInfoBlock,
       #enemyInfoBlock {
         height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
 
         #playerInfoTitle,
         #enemyInfoTitle {
@@ -321,9 +581,18 @@ GAME PAGE
 
           > div {
             height: 25%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                    justify-content: center;
           }
         }
 
@@ -334,9 +603,18 @@ GAME PAGE
 
           > div {
             height: 25%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                    justify-content: center;
             font-weight: bolder;
           }
         }
@@ -345,17 +623,34 @@ GAME PAGE
       #actionBlock {
         height: 100%;
         background-color: black;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+                align-items: center;
 
         #actionBlockInner {
           height: 80%;
           width: 95%;
           color: $terminalGreen;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
           display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+                  flex-wrap: wrap;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+                  justify-content: space-between;
 
 
           #actionAttackBlock {
@@ -363,9 +658,18 @@ GAME PAGE
             height: 40%;
             border: 1px solid $terminalGreen;
             margin-bottom: 10%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+                    align-items: center;
           }
 
           #actionAbility1Block,
@@ -374,9 +678,18 @@ GAME PAGE
             height: 40%;
             border: 1px solid $terminalGreen;
             text-align: center;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                    justify-content: center;
           }
 
           #actionAttackBlock,

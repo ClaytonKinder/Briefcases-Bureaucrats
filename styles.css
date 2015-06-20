@@ -1,6 +1,9 @@
 /*********************
 VARIABLES
 *********************/
+@font-face {
+  font-family: "PressStart2P";
+  src: url("PressStart2P.ttf"); }
 /*********************
 SETUP
 *********************/
@@ -34,9 +37,6 @@ a {
   max-width: 1100px;
   margin: 0 auto; }
 
-/* .activePage {
-  display: flex !important;
-} */
 /*********************
 CREATION PAGE
 *********************/
@@ -45,34 +45,78 @@ CREATION PAGE
   width: 100%;
   color: #1FE41A;
   font-weight: lighter;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center; }
   #characterCreationPage #characterCreationBlock {
     height: 750px;
     width: 100%;
     border: 1px solid #1FE41A;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center; }
     #characterCreationPage #characterCreationBlock #creationTitleBlock {
       width: 100%;
       height: 100px;
       background: #1FE41A;
       color: black;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
       justify-content: center; }
       #characterCreationPage #characterCreationBlock #creationTitleBlock h1 {
         font-weight: lighter;
-        font-size: 4rem; }
+        font-size: 1.8rem;
+        font-family: "PressStart2P"; }
     #characterCreationPage #characterCreationBlock #creationInfoBlock {
       height: 100%;
       width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
       justify-content: space-around; }
       #characterCreationPage #characterCreationBlock #creationInfoBlock #creationNameBlock {
         margin-top: 25px;
@@ -81,7 +125,13 @@ CREATION PAGE
         position: relative;
         border: 1px solid #1FE41A;
         background-color: black;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
         align-items: center; }
         #characterCreationPage #characterCreationBlock #creationInfoBlock #creationNameBlock #creationNameTitle {
           position: absolute;
@@ -93,6 +143,7 @@ CREATION PAGE
         #characterCreationPage #characterCreationBlock #creationInfoBlock #creationNameBlock #characterNameInput {
           height: 100%;
           width: 100%;
+          font-family: "PressStart2P";
           font-size: 3.5rem;
           background-color: black;
           border: 0;
@@ -104,8 +155,17 @@ CREATION PAGE
         border: 1px solid #1FE41A;
         position: relative;
         width: 90%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
         align-items: center; }
         #characterCreationPage #characterCreationBlock #creationInfoBlock #creationDepartmentBlock #creationDepartmentTitle {
           position: absolute;
@@ -118,6 +178,9 @@ CREATION PAGE
           width: 80%;
           border: 1px solid #1FE41A;
           height: 200px;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
           display: flex; }
           #characterCreationPage #characterCreationBlock #creationInfoBlock #creationDepartmentBlock #creationDepartmentsBlock .activeDepartment {
             background-color: #1FE41A;
@@ -135,16 +198,34 @@ CREATION PAGE
             #characterCreationPage #characterCreationBlock #creationInfoBlock #creationDepartmentBlock #creationDepartmentsBlock .creationDepartmentBlock .creationDepartmentImage {
               height: 150px;
               width: 100%;
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
               display: flex;
+              -webkit-box-pack: center;
+              -webkit-justify-content: center;
+              -ms-flex-pack: center;
               justify-content: center;
+              -webkit-box-align: center;
+              -webkit-align-items: center;
+              -ms-flex-align: center;
               align-items: center; }
               #characterCreationPage #characterCreationBlock #creationInfoBlock #creationDepartmentBlock #creationDepartmentsBlock .creationDepartmentBlock .creationDepartmentImage i {
                 font-size: 4rem; }
             #characterCreationPage #characterCreationBlock #creationInfoBlock #creationDepartmentBlock #creationDepartmentsBlock .creationDepartmentBlock .creationDepartmentName {
               height: 50px;
               border-top: 1px solid #1FE41A;
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
               display: flex;
+              -webkit-box-pack: center;
+              -webkit-justify-content: center;
+              -ms-flex-pack: center;
               justify-content: center;
+              -webkit-box-align: center;
+              -webkit-align-items: center;
+              -ms-flex-align: center;
               align-items: center; }
             #characterCreationPage #characterCreationBlock #creationInfoBlock #creationDepartmentBlock #creationDepartmentsBlock .creationDepartmentBlock:hover {
               background-color: #1FE41A;
@@ -173,53 +254,207 @@ GAME PAGE
   color: #1FE41A;
   font-weight: lighter;
   z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center; }
   #gamePage #gamePageBlock {
+    position: relative;
     height: 700px;
     width: 100%;
     border: 1px solid #1FE41A; }
+    #gamePage #gamePageBlock #winLoseBlock {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #1FE41A;
+      color: black;
+      font-family: "PressStart2P";
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around; }
+      #gamePage #gamePageBlock #winLoseBlock #winLoseText {
+        text-align: center;
+        font-size: 5rem; }
+      #gamePage #gamePageBlock #winLoseBlock #winLosePlayAgain {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        #gamePage #gamePageBlock #winLoseBlock #winLosePlayAgain span {
+          text-decoration: underline;
+          cursor: pointer; }
     #gamePage #gamePageBlock #gameScreen {
       height: 500px;
+      position: relative;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
       justify-content: space-around; }
       #gamePage #gamePageBlock #gameScreen > div {
         width: 33.33%;
         height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
         align-items: center; }
         #gamePage #gamePageBlock #gameScreen > div > div {
           height: 75%;
           width: 75%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
           justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
           align-items: center; }
           #gamePage #gamePageBlock #gameScreen > div > div i {
             font-size: 10rem; }
       #gamePage #gamePageBlock #gameScreen #gameScreenMiddle {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
         align-items: center; }
         #gamePage #gamePageBlock #gameScreen #gameScreenMiddle > div {
           width: 100%; }
+        #gamePage #gamePageBlock #gameScreen #gameScreenMiddle #turnBlock {
+          background-color: black;
+          color: #1FE41A;
+          height: 100px; }
+        #gamePage #gamePageBlock #gameScreen #gameScreenMiddle #combatLog {
+          text-align: center; }
+          #gamePage #gamePageBlock #gameScreen #gameScreenMiddle #combatLog #combatLogText {
+            display: none; }
         #gamePage #gamePageBlock #gameScreen #gameScreenMiddle #infoBox {
-          background-color: blue; }
+          height: 50%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: end;
+          -webkit-align-items: flex-end;
+          -ms-flex-align: end;
+          align-items: flex-end; }
+          #gamePage #gamePageBlock #gameScreen #gameScreenMiddle #infoBox #infoBoxBlock {
+            color: black;
+            height: 50%;
+            width: 100%;
+            display: none;
+            background-color: #1FE41A; }
+            #gamePage #gamePageBlock #gameScreen #gameScreenMiddle #infoBox #infoBoxBlock #infoBoxBlockTop {
+              height: 25%;
+              border-bottom: 1px solid black;
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-align: center;
+              -webkit-align-items: center;
+              -ms-flex-align: center;
+              align-items: center; }
+              #gamePage #gamePageBlock #gameScreen #gameScreenMiddle #infoBox #infoBoxBlock #infoBoxBlockTop #infoBoxBlockTitle {
+                width: 60%;
+                border-right: 1px solid black;
+                text-align: center;
+                font-weight: bolder; }
+              #gamePage #gamePageBlock #gameScreen #gameScreenMiddle #infoBox #infoBoxBlock #infoBoxBlockTop #infoBoxBlockCost {
+                width: 40%;
+                text-align: center; }
+            #gamePage #gamePageBlock #gameScreen #gameScreenMiddle #infoBox #infoBoxBlock #infoBoxBlockDescription {
+              height: 75%;
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              text-align: center;
+              -webkit-box-pack: center;
+              -webkit-justify-content: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              -webkit-box-align: center;
+              -webkit-align-items: center;
+              -ms-flex-align: center;
+              align-items: center; }
     #gamePage #gamePageBlock #gameInfo {
       height: 200px;
       background-color: #1FE41A;
       color: black;
       border-top: 3px solid #1FE41A;
       border-bottom: 3px solid #1FE41A;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex; }
       #gamePage #gamePageBlock #gameInfo > div {
         width: 33.33%; }
       #gamePage #gamePageBlock #gameInfo #playerInfoBlock,
       #gamePage #gamePageBlock #gameInfo #enemyInfoBlock {
         height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
         #gamePage #gamePageBlock #gameInfo #playerInfoBlock #playerInfoTitle,
         #gamePage #gamePageBlock #gameInfo #playerInfoBlock #enemyInfoTitle,
@@ -246,8 +481,17 @@ GAME PAGE
           #gamePage #gamePageBlock #gameInfo #enemyInfoBlock #playerInfoStatNames > div,
           #gamePage #gamePageBlock #gameInfo #enemyInfoBlock #enemyInfoStatNames > div {
             height: 25%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
             align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
             justify-content: center; }
         #gamePage #gamePageBlock #gameInfo #playerInfoBlock #playerInfoStatValues,
         #gamePage #gamePageBlock #gameInfo #playerInfoBlock #enemyInfoStatValues,
@@ -260,30 +504,65 @@ GAME PAGE
           #gamePage #gamePageBlock #gameInfo #enemyInfoBlock #playerInfoStatValues > div,
           #gamePage #gamePageBlock #gameInfo #enemyInfoBlock #enemyInfoStatValues > div {
             height: 25%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
             align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
             justify-content: center;
             font-weight: bolder; }
       #gamePage #gamePageBlock #gameInfo #actionBlock {
         height: 100%;
         background-color: black;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
         align-items: center; }
         #gamePage #gamePageBlock #gameInfo #actionBlock #actionBlockInner {
           height: 80%;
           width: 95%;
           color: #1FE41A;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
           justify-content: space-between; }
           #gamePage #gamePageBlock #gameInfo #actionBlock #actionBlockInner #actionAttackBlock {
             width: 100%;
             height: 40%;
             border: 1px solid #1FE41A;
             margin-bottom: 10%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
             justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
             align-items: center; }
           #gamePage #gamePageBlock #gameInfo #actionBlock #actionBlockInner #actionAbility1Block,
           #gamePage #gamePageBlock #gameInfo #actionBlock #actionBlockInner #actionAbility2Block {
@@ -291,8 +570,17 @@ GAME PAGE
             height: 40%;
             border: 1px solid #1FE41A;
             text-align: center;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
             align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
             justify-content: center; }
           #gamePage #gamePageBlock #gameInfo #actionBlock #actionBlockInner #actionAttackBlock,
           #gamePage #gamePageBlock #gameInfo #actionBlock #actionBlockInner #actionAbility1Block,
