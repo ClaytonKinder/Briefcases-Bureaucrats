@@ -223,22 +223,3 @@ var departments = [
 ///////////////////////////
 
 var enemyNames = ["Steven", "Michael", "Thomas", "Albert", "Franklin", "Alice", "Fran", "Bernice", "Tara", "Vince", "Matthew", "Pablo", "Sarah", "Patrick", "Pierre", "Quentin", "Brandon", "Grant", "Miranda"];
-
-
-
-////////////////////////////
-// CONSTRUCTORS
-///////////////////////////
-
-
-////////////////////////////
-// FUNCTIONS
-///////////////////////////
-
-function getAttackNumArray() {
-  var attackNum = [];
-  for (var i = 1; i <= 100; i++) {
-    attackNum.push(i);
-  }
-  return attackNum;
-}

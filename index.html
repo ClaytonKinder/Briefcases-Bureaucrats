@@ -13,6 +13,9 @@
 <body>
   <div id="pageWrapper">
     <div id="characterCreationPage" class="activePage">
+      <div class="audioSwitchBlock">
+        <i class="audioSwitch fa fa-volume-up"></i>
+      </div>
       <div id="characterCreationBlock">
         <div id="creationTitleBlock">
           <h1>Briefcases & Bureaucrats</h1>
@@ -66,6 +69,9 @@
       </div>
     </div>
     <div id="gamePage">
+      <div class="audioSwitchBlock2">
+        <i class="audioSwitch2 fa fa-volume-up"></i>
+      </div>
       <div id="gamePageBlock">
         <div id="winLoseBlock">
           <div id="winLoseText">
@@ -196,8 +202,8 @@
       </div>
     </div>
   </div>
-<audio src="media/Nutko_Croq.mp3" autoplay loop>
-
+<audio id="mainTheme" preload="none" loop>
+  <source src="media/Nutko_Croq.mp3" type="audio/mpeg">
 </audio>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/jquery-color/jquery.color.js"></script>

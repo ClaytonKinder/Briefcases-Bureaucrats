@@ -1,3 +1,7 @@
+////////////////////////
+// SETUP
+///////////////////////
+
 var charName;
 var charDepartment;
 var player1;
@@ -5,7 +9,30 @@ var player2;
 var turnCounter = 1;
 $('#gamePage').hide();
 $('#winLoseBlock').hide();
+$("#mainTheme").trigger('load');
+$("#mainTheme").trigger('play');
 
+////////////////////////
+// EVENTS
+///////////////////////
+
+// Toggles audio state on character creation page
+$('.audioSwitch').on('click', function(e) {
+  e.preventDefault();
+  $(this).toggleClass('fa-volume-up').toggleClass('fa-volume-off');
+  $('.audioSwitch2').toggleClass('fa-volume-up').toggleClass('fa-volume-off');
+  toggleMuteAudio();
+});
+
+// Toggles audio state on game page
+$('body').on('click', '.audioSwitch2', function(e) {
+  e.preventDefault();
+  $(this).toggleClass('fa-volume-up').toggleClass('fa-volume-off');
+  $('.audioSwitch').toggleClass('fa-volume-up').toggleClass('fa-volume-off');
+  toggleMuteAudio();
+});
+
+// Shows ability1 information when hovering over actionAbility1Block
 $('#actionAbility1Block').hover(function(e) {
   e.preventDefault();
   $('#infoBoxBlockTitle').text(player1.ability1.title);
@@ -16,6 +43,7 @@ $('#actionAbility1Block').hover(function(e) {
   $('#infoBoxBlock').hide();
 });
 
+// Shows ability2 information when hovering over actionAbility2Block
 $('#actionAbility2Block').hover(function(e) {
   e.preventDefault();
   $('#infoBoxBlockTitle').text(player1.ability2.title);
@@ -26,6 +54,7 @@ $('#actionAbility2Block').hover(function(e) {
   $('#infoBoxBlock').hide();
 });
 
+// Selects your department depending on which box is clicked
 $('.creationDepartmentBlock').on('click', function(e) {
   $(this).siblings().removeClass('activeDepartment');
   $(this).addClass('activeDepartment');
@@ -37,6 +66,7 @@ $('.creationDepartmentBlock').on('click', function(e) {
   });
 });
 
+// Submits characer creation info and creates a character
 $('#creationSubmitButton').on('click', function(e) {
   charName = $('#characterNameInput').val().trim();
   if (charName !== undefined && charName.length > 0 && charDepartment !== undefined) {
@@ -55,6 +85,7 @@ $('#creationSubmitButton').on('click', function(e) {
   }
 });
 
+// Basic attack function for damaging player2
 $('#actionAttackBlock').on('click', function(e) {
   e.preventDefault();
   console.log('TURNCOUNT: ', turnCounter);
@@ -64,6 +95,7 @@ $('#actionAttackBlock').on('click', function(e) {
   whoseTurn();
 });
 
+// Function to use ability1 on player2
 $('#actionAbility1Block').on('click', function(e) {
   e.preventDefault();
   if (player1.energy >= player1.ability1.cost) {
@@ -78,6 +110,7 @@ $('#actionAbility1Block').on('click', function(e) {
   }
 });
 
+// Function to use ability 2 on player2
 $('#actionAbility2Block').on('click', function(e) {
   e.preventDefault();
   if (player1.energy >= player1.ability1.cost) {
@@ -97,8 +130,18 @@ $('#winLosePlayAgain').on('click', function(e) {
   $('#winLoseBlock').hide();
   $('#gamePage').hide();
   $('#characterCreationPage').fadeIn();
-})
+});
 
+////////////////////////
+// FUNCTIONS
+///////////////////////
+
+// Function to mute audio
+function toggleMuteAudio(){
+  $("#mainTheme").prop("muted",!$("#mainTheme").prop("muted"));
+}
+
+// Function that determines what move an enemy makes
 function enemyAction() {
   var enemyActionNumber = Math.floor(Math.random() * 4) + 1;
   if (enemyActionNumber === 1 || enemyActionNumber === 2) {
@@ -113,6 +156,7 @@ function enemyAction() {
   }
 }
 
+// Function that displays combat information in the middle of the screen
 function combatLogAttack(damageDealt) {
   if (turnCounter % 2 !== 0) {
     console.log('Player 1 is attacking.');
@@ -125,6 +169,7 @@ function combatLogAttack(damageDealt) {
   }
 }
 
+// Function to attack the other player
 function attackAction() {
   if (turnCounter % 2 !== 0) {
     var damageDealt = Math.round((player1.attack - (0.60 * player2.defense)));
@@ -147,6 +192,7 @@ function attackAction() {
   }
 }
 
+// Function to use ability1 on other player
 function ability1Action() {
   console.log(player1.energy);
   console.log(player1.ability1.cost);
@@ -173,6 +219,7 @@ function ability1Action() {
   }
 }
 
+// Function to use ability2 on other player
 function ability2Action() {
   console.log('ENERGY BEFORE: ', player1.energy);
   console.log('COST BEFORE: ', player1.ability2.cost);
@@ -201,6 +248,7 @@ function ability2Action() {
   }
 }
 
+// Function to check if player1 has 0 or less health
 function player1DeathCheck() {
   if (player1.health <= 0) {
     $('#winLoseText').text("Your losar!");
@@ -212,6 +260,7 @@ function player1DeathCheck() {
   }
 }
 
+// Function to check if player2 has 0 or less health
 function player2DeathCheck() {
   if (player2.health <= 0) {
     $('#winLoseText').text("Your Winnar!");
@@ -223,6 +272,7 @@ function player2DeathCheck() {
   }
 }
 
+// Function to determine whose turn it is
 function whoseTurn() {
   var turnAnnouncement;
   if (turnCounter % 2 !== 0) {
@@ -252,6 +302,7 @@ function whoseTurn() {
   }
 }
 
+// Function that resets variables to their defaults
 function resetGame() {
   charName;
   charDepartment;
@@ -260,6 +311,11 @@ function resetGame() {
   turnCounter = 1;
 }
 
+////////////////////////
+// CONSTRUCTORS
+///////////////////////
+
+// Constructor that creates a Character
 function Character(charInfo) {
   this.name = charInfo.name;
   this.department = charInfo.department;
@@ -274,6 +330,7 @@ function Character(charInfo) {
   this.ability2 = charInfo.ability2;
 }
 
+// Function to gather data to send to the Character constructor to build player1
 function setUpCharacter() {
   var charInfo = {};
   charInfo.name = $('#characterNameInput').val().trim();
@@ -290,6 +347,7 @@ function setUpCharacter() {
   return charInfo;
 }
 
+// Function to gather data to send to the Character constructor to build player2
 function setUpEnemy() {
   var charInfo = {};
   var enemyDepartment = departments[Math.floor(Math.random() * departments.length)];
@@ -307,6 +365,7 @@ function setUpEnemy() {
   return charInfo;
 }
 
+// Function that sets up initial stats
 function setUpStats() {
   $('#playerInfoTitle h3').text(player1.name + " from " + player1.department);
   $('#playerHealth').text(Math.round(player1.health));

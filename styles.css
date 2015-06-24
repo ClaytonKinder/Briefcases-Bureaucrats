@@ -43,6 +43,8 @@ CREATION PAGE
 #characterCreationPage {
   height: 100%;
   width: 100%;
+  min-width: 1100px;
+  position: relative;
   color: #1FE41A;
   font-weight: lighter;
   display: -webkit-box;
@@ -57,6 +59,27 @@ CREATION PAGE
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
+  #characterCreationPage .audioSwitchBlock {
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    right: 0;
+    top: 115px;
+    font-size: 1.5rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    #characterCreationPage .audioSwitchBlock .audioSwitch {
+      cursor: pointer; }
   #characterCreationPage #characterCreationBlock {
     height: 750px;
     width: 100%;
@@ -251,6 +274,8 @@ GAME PAGE
 #gamePage {
   height: 100%;
   width: 100%;
+  min-width: 1100px;
+  position: relative;
   color: #1FE41A;
   font-weight: lighter;
   z-index: 1;
@@ -266,6 +291,28 @@ GAME PAGE
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
+  #gamePage .audioSwitchBlock2 {
+    height: 48px;
+    width: 48px;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    font-size: 1.5rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    #gamePage .audioSwitchBlock2 .audioSwitch2 {
+      cursor: pointer; }
   #gamePage #gamePageBlock {
     position: relative;
     height: 700px;
